@@ -1,0 +1,152 @@
+html,
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.left {
+  padding: 7%;
+}
+
+.right {
+  background-image: url('../media/background.webp');
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .right {
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    width: 50%;
+  }
+}
+
+.hr {
+  background-color: #ff470f;
+  border: none;
+  content: '';
+  height: 1px;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  transform-origin: center left;
+  width: 4rem;
+}
+
+/* Animations */
+.name,
+.hr,
+.job,
+.description {
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+  animation-fill-mode: both;
+}
+
+.job,
+.text {
+  animation-name: slideUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.button {
+  animation-name: slideUp;
+  animation-duration: 500ms;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
+  animation-fill-mode: both;
+}
+
+/* Keyframes */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fillUp {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Animation triggers */
+.name {
+  animation-name: slideDown;
+}
+
+.job,
+.text {
+  animation-name: slideUp;
+}
+
+.hr {
+  animation-name: fillUp;
+}
+
+.button {
+  animation-name: slideUp;
+}
+
+/* Delays */
+.name {
+  animation-delay: 100ms;
+}
+
+.job {
+  animation-delay: 200ms;
+}
+
+.hr {
+  animation-delay: 300ms;
+}
+
+.text:nth-child(1) {
+  animation-delay: 450ms;
+}
+
+.text:nth-child(2) {
+  animation-delay: 550ms;
+}
+
+.text:nth-child(3) {
+  animation-delay: 650ms;
+}
+
+.button:nth-child(1) {
+  animation-delay: 900ms;
+}
+
+.button:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.button:nth-child(3) {
+  animation-delay: 1.1s;
+}
+
+.button:nth-child(4) {
+  animation-delay: 1.2s;
+}

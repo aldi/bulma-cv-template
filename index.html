@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <title>Kate Woodman - Web Designer & Developer</title>
-    <meta name="title" content="Kate Woodman - Web Designer & Developer" />
-    <meta name="author" content="github.com/aldi" />
-    <meta name="description" content="Professional Portfolio of Kate Woodman - Web Designer & Developer" />
-    <meta name="keywords" content="web design, development, portfolio, frontend, UI/UX" />
-    <link rel="preconnect" href="https://fonts.googleapis.com https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" />
-    <link rel="preload" href="media/background.webp" as="image" />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>Kate Woodman - Web Designer &amp; Developer</title>
+  <meta name="title" content="Kate Woodman - Web Designer &amp; Developer" />
+  <meta name="author" content="github.com/aldi" />
+  <meta name="description"
+    content="Professional Portfolio of Kate Woodman - Web Designer &amp; Developer specializing in responsive design, performance and accessibility." />
+  <meta name="keywords" content="web design, development, portfolio, frontend, UI/UX" />
+  <link rel="canonical" href="https://aldi.github.io/bulma-cv-template/" />
+  <meta property="og:title" content="Kate Woodman - Web Designer &amp; Developer" />
+  <meta property="og:description"
+    content="Professional Portfolio of Kate Woodman - Web Designer &amp; Developer specializing in responsive design, performance optimization, and accessibility." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aldi.github.io/bulma-cv-template/" />
+  <meta property="og:image" content="https://aldi.github.io/bulma-cv-template/previews/preview.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kate Woodman - Web Designer &amp; Developer" />
+  <meta name="twitter:description"
+    content="Professional Portfolio of Kate Woodman - Web Designer &amp; Developer specializing in responsive design, performance optimization, and accessibility." />
+  <meta name="twitter:image" content="https://aldi.github.io/bulma-cv-template/previews/preview.webp" />
+  <link rel="icon" href="media/favicon.svg" type="image/svg+xml" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https://aldi.github.io; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="media/background.webp" as="image" />
+  <script>
+    (function initTheme() {
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem('theme');
+
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        root.setAttribute('data-theme', savedTheme);
+        root.style.colorScheme = savedTheme;
+        return;
+      }
+
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Kate Woodman","jobTitle":"Web Designer & Developer","url":"https://aldi.github.io/bulma-cv-template/","sameAs":["https://x.com/katewoodman","https://linkedin.com/in/katewoodman","https://github.com/katewoodman"]}</script>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <main id="main-content">
     <div class="columns mt-0">
       <div class="column is-6 left">
-        <p class="title is-2 has-text-weight-medium name">Hi, I'm Kate Woodman</p>
-        <p class="subtitle has-text-grey job">Web Designer & Developer</p>
+        <button id="theme-toggle" class="button is-ghost is-rounded theme-toggle-btn" aria-label="Switch to dark mode"
+          aria-pressed="false">
+          <span class="icon is-medium">
+            <span class="icon">
+              <i class="fas fa-moon fa-lg" id="theme-icon"></i>
+            </span>
+          </span>
+        </button>
+        <h1 class="title is-2 has-text-weight-medium name">Hi, I’m Kate Woodman</h1>
+        <p class="subtitle has-text-grey job">Web Designer &amp; Developer</p>
         <hr class="hr" />
         <div class="content has-text-grey description has-text-justified">
           <p class="text">
@@ -29,39 +78,72 @@
             innovative design solutions.
           </p>
           <p class="text">
-            I've successfully delivered projects for clients ranging from startups to established enterprises, focusing
+            I’ve successfully delivered projects for clients ranging from startups to established enterprises, focusing
             on responsive design, performance optimization, and accessibility. My expertise includes modern frontend
             frameworks, UI/UX best practices, and creative problem-solving.
           </p>
           <p class="text">
-            Currently based in San Francisco, I'm always excited to take on new challenges and collaborate on projects
+            Currently based in San Francisco, I’m always excited to take on new challenges and collaborate on projects
             that push creative boundaries while delivering real business value.
           </p>
         </div>
         <div class="buttons">
-          <button class="button is-medium is-twitter" aria-label="Follow on Twitter">
+          <a href="https://x.com/katewoodman" class="button is-medium is-x social-button" aria-label="Follow on X"
+            target="_blank" rel="noopener noreferrer">
             <span class="icon">
-              <i class="fab fa-twitter fa-lg"></i>
+              <i class="fa-brands fa-x-twitter fa-lg"></i>
             </span>
-          </button>
-          <button class="button is-medium is-facebook" aria-label="Add me on Facebook">
-            <span class="icon">
-              <i class="fab fa-facebook-f fa-lg"></i>
-            </span>
-          </button>
-          <button class="button is-medium is-linkedin" aria-label="Connect on LinkedIn">
+          </a>
+          <a href="https://linkedin.com/in/katewoodman" class="button is-medium is-linkedin social-button"
+            aria-label="Connect on LinkedIn" target="_blank" rel="noopener noreferrer">
             <span class="icon">
               <i class="fab fa-linkedin-in fa-lg"></i>
             </span>
-          </button>
-          <button class="button is-medium is-github" aria-label="My GitHub Profile">
+          </a>
+          <a href="https://github.com/katewoodman" class="button is-medium is-github social-button"
+            aria-label="My GitHub profile" target="_blank" rel="noopener noreferrer">
             <span class="icon">
               <i class="fab fa-github fa-lg"></i>
             </span>
-          </button>
+          </a>
         </div>
       </div>
       <div class="column is-6 right"></div>
     </div>
-  </body>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const html = document.documentElement;
+
+      if (!themeToggle || !themeIcon) {
+        return;
+      }
+
+      const applyThemeState = (theme) => {
+        const isDark = theme === 'dark';
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+        themeIcon.classList.toggle('fa-sun', isDark);
+        themeIcon.classList.toggle('fa-moon', !isDark);
+      };
+
+      const initialTheme = html.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      html.setAttribute('data-theme', initialTheme);
+      html.style.colorScheme = initialTheme;
+      applyThemeState(initialTheme);
+
+      themeToggle.addEventListener('click', () => {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        const nextTheme = isDark ? 'light' : 'dark';
+        html.setAttribute('data-theme', nextTheme);
+        html.style.colorScheme = nextTheme;
+        localStorage.setItem('theme', nextTheme);
+        applyThemeState(nextTheme);
+      });
+    });
+  </script>
+</body>
+
 </html>

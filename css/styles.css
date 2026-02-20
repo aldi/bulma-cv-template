@@ -1,10 +1,36 @@
 html,
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: Quicksand, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1,
+h2,
+p,
+span,
+.title,
+.subtitle,
+.content {
+  transition: color 0.4s ease;
 }
 
 .left {
   padding: 7%;
+  position: relative;
+}
+
+.theme-toggle-btn {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  animation-name: slide-down;
+  animation-duration: 1s;
+  animation-delay: 50ms;
+  animation-fill-mode: both;
+}
+
+.theme-toggle-btn:hover {
+  text-decoration: none !important;
 }
 
 .right {
@@ -16,12 +42,11 @@ body {
   width: 100%;
 }
 
-@media (min-width: 769px) {
+@media (width >=769px) {
   .right {
     height: 100vh;
-    position: fixed;
-    right: 0;
-    width: 50%;
+    position: sticky;
+    top: 0;
   }
 }
 
@@ -34,9 +59,10 @@ body {
   margin-top: 1.5rem;
   transform-origin: center left;
   width: 4rem;
+  animation-name: fill-up;
+  animation-delay: 300ms;
 }
 
-/* Animations */
 .name,
 .hr,
 .job,
@@ -48,79 +74,69 @@ body {
 
 .job,
 .text {
-  animation-name: slideUp;
+  animation-name: slide-up;
   animation-duration: 1s;
   animation-fill-mode: both;
 }
 
 .button {
-  animation-name: slideUp;
+  animation-name: slide-up;
   animation-duration: 500ms;
   animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
   animation-fill-mode: both;
 }
 
-/* Keyframes */
-@keyframes slideDown {
+.social-button {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+@keyframes slide-down {
   from {
     opacity: 0;
     transform: translateY(-1rem);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes slideUp {
+@keyframes slide-up {
   from {
     opacity: 0;
     transform: translateY(1rem);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes fillUp {
+@keyframes fill-up {
   from {
     transform: scaleX(0);
   }
+
   to {
     transform: scaleX(1);
   }
 }
 
-/* Animation triggers */
 .name {
-  animation-name: slideDown;
-}
-
-.job,
-.text {
-  animation-name: slideUp;
-}
-
-.hr {
-  animation-name: fillUp;
-}
-
-.button {
-  animation-name: slideUp;
-}
-
-/* Delays */
-.name {
+  animation-name: slide-down;
   animation-delay: 100ms;
 }
 
 .job {
+  animation-name: slide-up;
   animation-delay: 200ms;
 }
 
-.hr {
-  animation-delay: 300ms;
+.text {
+  animation-name: slide-up;
 }
 
 .text:nth-child(1) {
@@ -149,4 +165,34 @@ body {
 
 .button:nth-child(4) {
   animation-delay: 1.2s;
+}
+
+#theme-icon.fa-moon {
+  color: #000;
+}
+
+#theme-icon.fa-sun {
+  color: #ffa500;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #ff470f;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
